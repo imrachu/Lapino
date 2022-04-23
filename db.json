@@ -2,17 +2,22 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "Rachit Kanaujia",
+      "email": "rachit.kanaujia@gmail.com",
+      "mobile": 9687678787,
+      "address": "1465 E TDI City",
+      "services": "dasdasd"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "name": "Rachit Kanaujia",
+      "email": "rachit.kanaujia@gmail.com",
+      "mobile": 7686765765765,
+      "address": "Kanpur",
+      "services": "ewrwerwewe"
     }
   ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }

@@ -5,6 +5,7 @@
       <button
         class="btn btn-success"
         type="button"
+        (click)="addBtn()"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
@@ -46,16 +47,17 @@
       <th scope="col">Action</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Jhon</td>
-      <td>Miller</td>
-      <td>jhon.miller@abc.com</td>
-      <td>New York</td>
-      <td>Coffee & Tea</td>
-      <td><button class="btn btn-info">Edit</button></td>
-      <td><button class="btn btn-danger">Delete</button></td>
+  <tbody >
+    <tr *ngFor="let restaurant of restaurants; let i = index">
+      <td>{{restaurant.id}}</td>
+      <td>{{restaurant.name}}</td>
+      <td>{{restaurant.email}}</td>
+      <td>{{restaurant.mobile}}</td>
+      <td>{{restaurant.address}}</td>
+      <td>{{restaurant.services}}</td>
+      <td><button class="btn btn-info" data-bs-toggle="modal"
+        data-bs-target="#exampleModal" (click)="editRestaurant(restaurant)">Edit</button></td>
+      <td><button class="btn btn-danger" (click)="deleteRestaurant(restaurant)">Delete</button></td>
     </tr>
   </tbody>
 </table>
@@ -109,7 +111,8 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Close
         </button>
-        <button type="button" class="btn btn-primary">Add Details</button>
+        <button *ngIf="this.showAddBtn" type="button" (click)="addRestaurant()" class="btn btn-primary" data-bs-dismiss="modal">Add Details</button>
+        <button *ngIf="this.showUpdateBtn" type="button" (click)="updateRestaurant()" class="btn btn-primary" data-bs-dismiss="modal">Update</button>
       </div>
     </div>
   </div>
