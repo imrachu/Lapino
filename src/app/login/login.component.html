@@ -1,1 +1,37 @@
-<p>login works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>Restaurant Login</h1><hr>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="login()" class="mb-3">
+          <div class="mb-3">
+            <label class="form-label">
+              Email address
+            </label>
+            <input
+              type="email"
+              formControlName="email"
+              placeholder="Email ID"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">
+              Password
+            </label>
+            <input
+              type="password"
+              formControlName="password"
+              placeholder="Password"
+              class="form-control"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <a routerLink="/signup">New User? Register Here</a>
+      </div>
+    </div>
+  </div>
+</div>

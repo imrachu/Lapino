@@ -17,6 +17,22 @@
       "services": "ewrwerwewe"
     }
   ],
+  "users": [
+    {
+      "name": "Sanjay SIngh Bisht",
+      "mobile": 9876543456,
+      "email": "test@test.com",
+      "password": "8675665464",
+      "id": 1
+    },
+    {
+      "name": "asaa",
+      "mobile": 4534543543,
+      "email": "aaa@aaa.aa",
+      "password": "123456",
+      "id": 2
+    }
+  ],
   "comments": [],
   "profile": {
     "name": "typicode"
